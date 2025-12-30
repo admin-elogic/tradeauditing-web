@@ -78,11 +78,16 @@ const Hero = ({ onCtaClick, mode = 'default' }) => {
                         boxShadow: '0 20px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05)',
                         backgroundColor: '#fff'
                     }}>
-                        <img
-                            src="/hero-dashboard.png"
-                            alt="TradeAuditing Data Dashboard"
-                            style={{ width: '100%', height: 'auto', display: 'block' }}
-                        />
+                        <picture>
+                            <source srcSet="/hero-dashboard.webp" type="image/webp" />
+                            <img
+                                src="/hero-dashboard.png"
+                                alt="TradeAuditing Data Dashboard"
+                                loading="eager"
+                                fetchpriority="high"
+                                style={{ width: '100%', height: 'auto', display: 'block' }}
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
